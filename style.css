@@ -1,0 +1,230 @@
+@charset "utf-8";
+
+/* font */
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* reset */
+html,
+body,
+div,
+span,
+h1,
+p,
+a,
+em,
+img,
+b,
+ul,
+li,
+section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* style */
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 1em;
+    width: 75em;
+    margin: 15em auto;
+    font-family: 'SpoqaHanSansNeo-Regular';
+    vertical-align: middle;
+}
+
+.text_area h1,
+.text_area b {
+    font-size: 4.375rem;
+    line-height: 5.5rem;
+    color: #121314;
+}
+
+.text_area h1 b {
+    font-family: 'SpoqaHanSansNeo-Bold';
+}
+
+.text_area p {
+    margin-top: 1.25rem;
+    font-size: 1.25rem;
+    color: #47494d;
+}
+
+.image_area ul li {
+    width: 30.375rem;
+    height: 17.5rem;
+    border-radius: 1.25rem;
+}
+
+.image_area ul li+li {
+    margin-top: 1.25em;
+}
+
+.image_area ul .video_department {
+    background-image: url("images/img1.png");
+    background-size: 30.375rem 17.5rem;
+}
+
+.image_area ul li p {
+    padding: 1.333em 0 0 1.333em;
+    color: #fff;
+    font-size: 1.875rem;
+    font-family: 'SpoqaHanSansNeo-Bold';
+}
+
+.image_area ul li a {
+    float: right;
+    color: #fff;
+    margin: 9.5em 1.333em 1.333em 0;
+}
+
+.image_area ul li a::after {
+    content: "";
+    display: inline-block;
+    background: url("images/icon.png") no-repeat;
+    background-size: 1.25rem 1.25rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    vertical-align: bottom;
+    margin-left: 0.25em;
+}
+
+.image_area ul .book_department {
+    background-image: url("images/img2.png");
+    background-size: 30.375rem 17.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        margin: 0 1.875em;
+        width: 100vw;
+    }
+
+    .text_area {
+        margin: 6.25em 0 3.75em 0;
+        word-break: keep-all;
+    }
+
+    .image_area {
+        margin-bottom: 31.25em;
+    }
+
+    .image_area ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .image_area ul li {
+        width: 21.5rem;
+        height: 12.375rem;
+        border-radius: 1.25rem;
+    }
+
+    .image_area ul li+li {
+        margin: 0 0 0 1.25em;
+    }
+
+    .image_area ul li p {
+        padding: 1.25em 0 0 1.25em;
+        font-size: 1.5rem;
+        line-height: 1.25em;
+    }
+
+    .image_area ul li a {
+        margin: 6.125em 1.25em 1.25em 0;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    main {
+        flex-direction: column;
+        margin: 6.25em 1em 5.688em 1em;
+        width: 100vw;
+    }
+
+    .text_area {
+        margin: 0 0 2.5em 0;
+        word-break: keep-all;
+        color: #121314;
+    }
+
+    .text_area h1 {
+        font-size: 2.25em;
+        line-height: 1.25em;
+    }
+
+    .text_area b {
+        font-size: 1em;
+        line-height: 1em;
+    }
+
+    .text_area p {
+        margin-top: 1em;
+        font-size: 0.875em;
+        color: #47494d;
+    }
+
+    .image_area {
+        margin-bottom: 0;
+    }
+
+    .image_area ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image_area ul li {
+        width: 22.25em;
+        height: 12.813em;
+        border-radius: 1.25rem;
+    }
+
+    .image_area ul li+li {
+        margin: 1.25em 0 0 0;
+    }
+
+    .image_area ul li p {
+        padding: 1.5em 0 0 1.5em;
+        font-size: 1.25em;
+        line-height: 1.25em;
+    }
+
+    .image_area ul li a {
+        margin: 8em 1.429em 1.429em 0;
+        font-size: 0.875em;
+        line-height: 1.286em;
+    }
+}
